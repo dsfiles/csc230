@@ -21,3 +21,40 @@
 </body>
 </html>
 
+
+// by Zhe
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function celsiusToFahrenheit(celsius) {
+        return (celsius * 9/5) + 32;
+}
+
+      function fahrenheitToCelsius(fahrenheit) {
+        return (fahrenheit - 32) * 5/9;
+}
+
+let choice;
+do {
+  choice = prompt("Enter 1 to convert from Celsius to Fahrenheit, or 2 to convert from Fahrenheit to Celsius: ");
+} while (choice !== "1" && choice !== "2");
+
+if (choice === "1") {
+  let celsiusInput = prompt("Enter the temperature in Celsius: ");
+  let fahrenheitOutput = celsiusToFahrenheit(parseFloat(celsiusInput));
+  alert(`The temperature in Fahrenheit is: ${fahrenheitOutput.toFixed(2)}°F`);
+} else if (choice === "2") {
+  let fahrenheitInput = prompt("Enter the temperature in Fahrenheit: ");
+  let celsiusOutput = fahrenheitToCelsius(parseFloat(fahrenheitInput));
+  alert(`The temperature in Celsius is: ${celsiusOutput.toFixed(2)}°C`);
+}
+
+</script>
+</body>
+</html>
